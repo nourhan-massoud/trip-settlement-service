@@ -7,7 +7,7 @@ from app.helpers.config import Config
 class DBConnector:
     def get_connection(self):
         config = Config()
-        return pymysql.connect(
+        mysql_connection = pymysql.connect(
             host=config.mysql_host,
             port=config.mysql_port,
             user=config.mysql_user,
@@ -18,3 +18,5 @@ class DBConnector:
             autocommit=False,
             connect_timeout=10,
         )
+        mysql_cursor = mysql_connection.cursor()
+        return mysql_connection, mysql_cursor

@@ -1,19 +1,19 @@
 1 - Set up the API project and connect it to the database.
-      Folders (same names as ClassFit, no broker):
+      Folders:
       - app/controllers
       - app/models
       - app/requests
       - app/helpers
-      - routes/ (same as 121, at project root)
+      - routes/
       Config:
       - .env.example in git (no real secrets)
       - .env local only (git ignores it)
       - app/helpers/config.py reads env values
 
-2 - Create the TripEvent model and the API request/response models.
+2 - Create TripModel.
       - fare_amount is DECIMAL, not float.
 
-3 - In models, keep a store interface so storage can be changed later.
+3 - Save and read trip events in TripModel.
 
 4 - Create a trip_events table:
       - event_id is UNIQUE (no duplicate events).

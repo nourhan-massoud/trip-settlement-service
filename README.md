@@ -6,16 +6,14 @@ Stack: Python, Flask, MySQL.
 
 ## Folders
 
-Same names as our other Flask apps. No broker (no queue in this task).
-
 ```
-database/        SQL table (trip_events)
-routes/          URL list (same idea as 121)
+database/
+routes/
 app/
-  controllers/   what each URL does
-  models/        TripEvent, save events, driver summary
-  requests/      check the JSON before save
-  helpers/       small shared code (DB, dates)
+  controllers/
+  models/
+  requests/
+  helpers/
 ```
 
 ## Config
